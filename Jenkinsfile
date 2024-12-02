@@ -58,7 +58,7 @@ pipeline {
                 // Execute the Python script
                 bat '''
                 echo "Running hello.py..."
-                python3 hello.py
+                python hello.py
                 '''
             }
         }
