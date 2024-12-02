@@ -56,8 +56,8 @@ pipeline {
         stage('Run Script') {
             steps {
                 // Execute the Python script
-                sh '''
-                bat "Running hello.py..."
+                bat '''
+                echo "Running hello.py..."
                 python3 hello.py
                 '''
             }
