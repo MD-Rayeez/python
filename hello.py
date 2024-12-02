@@ -1,7 +1,7 @@
 import pymysql
 import json
 import math
-from modules.util.globals import REMOTEDB_SERVER, REMOTEDB_UID, REMOTEDB_PWD, REMOTEDB_PORT
+# from modules.util.globals import REMOTEDB_SERVER, REMOTEDB_UID, REMOTEDB_PWD, REMOTEDB_PORT
 
 # Database connection details
 # DB_CONFIG = {
