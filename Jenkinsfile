@@ -1,23 +1,15 @@
 pipeline {
     agent any
-    
-    stages {
-        stage('Build') {
-            steps {
-                bat 'python hello.py'
-            }
-        }
-        stage('Archive') {
-            steps {
-                archiveArtifacts artifacts: 'devices.json', fingerprint: true
-            }
-        }
-    }
 
-    post {
-        always {
-            // Notify or clean up if needed
-            echo 'Build completed!'
+    stages {
+        stage('Run Python Script') {
+            steps {
+                script {
+                    dir('D:\\AxiaManagerV1\\ReleaseSource') {
+                        bat 'python generate_report.py "1.0.0.6"'
+                    }
+                }
+            }
         }
     }
 }
